@@ -1,0 +1,18 @@
+---
+- hosts: dockerhost
+
+  tasks:
+  - name: Stop the old container
+    command: docker stop regapplication
+    ignore_errors: yes
+
+  - name: Remove the old container
+    command: docker rm regapplication
+    ignore_errors: yes
+
+  - name: Remove the old image
+    command: docker rmi dhanushnd/regapp:v1
+    ignore_errors: yes
+
+  - name: Deploy the new image in dockerhub on the docker server
+    command: docker run -d --name regapplication -p 8085:8080 dhanushnd/regapp:v1

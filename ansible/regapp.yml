@@ -1,0 +1,10 @@
+---
+- hosts: ansible
+
+  tasks:
+  - name: creat a docker image
+    command: docker build -t dhanushnd/regapp:v1 .
+    args:
+      chdir: /opt/docker
+  - name: push the docker image to dockerhub
+    command: docker push dhanushnd/regapp:v1
