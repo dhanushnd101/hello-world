@@ -25,5 +25,8 @@
     <hr>
     <br>
     <button type="submit" class="registerbtn">Register</button>
+    <br>
+
+    <p>This application was developed by dhanushnd.com with &#60;3 </p>
   </div>
 </form>
