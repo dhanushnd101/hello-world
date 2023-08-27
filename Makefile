@@ -1,10 +1,12 @@
 start-servers:
 	aws ec2 start-instances --instance-id i-070cfa2385792f874
 	aws ec2 start-instances --instance-id i-0d3d5088580ac59e3
+	aws ec2 start-instances --instance-id i-0fee66230234e58b7
 
 stop-servers:
 	aws ec2 stop-instances --instance-id i-070cfa2385792f874
 	aws ec2 stop-instances --instance-id i-0d3d5088580ac59e3
+	aws ec2 stop-instances --instance-id i-0fee66230234e58b7
 
 tomcat:
 	ssh -i /Users/dhanushdinesh/Downloads/DevOpsProjectKey.pem ec2-user@54.209.127.2
@@ -17,4 +19,9 @@ jenkins:
 # stop Jenkins service jenkins stop
 # Get passwork cat var/lib/jenkisn/secrets/initialAdminPassword -> 043e9c0354fa4818959763b474fac72d
 
-.PHONY: start-servers stop-servers tomcat jenkins
+dockers:
+	ssh -i /Users/dhanushdinesh/Downloads/DevOpsProjectKey.pem ec2-user@54.145.153.102
+# start docker service docker start 
+# stop docker service docker start
+
+.PHONY: start-servers stop-servers tomcat jenkins dockers 
