@@ -26,7 +26,9 @@
     <br>
     <button type="submit" class="registerbtn">Register</button>
     <br>
-
+    <hr>
     <p>This application was developed by dhanushnd.com with &#60;3 </p>
+    <hr>
+    <h3>It has been a great devOps course _\m/</h3>
   </div>
 </form>

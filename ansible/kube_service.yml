@@ -1,0 +1,9 @@
+---
+- hosts: eks
+# become: true
+  user: root
+
+  tasks:
+  - name: Deploy the services on kubernetes
+    command: kubectl apply -f deployment-service.yml
+

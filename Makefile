@@ -40,7 +40,7 @@ ekss:
 
 gitpush:
 	git add .
-	git commit -m "Added kubernetes file"
+	git commit -m "Added ansible files with deployment"
 	git push origin master
 
 .PHONY: start-servers stop-servers tomcat jenkins dockers ansible ekss

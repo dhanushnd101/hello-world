@@ -1,0 +1,8 @@
+---
+- hosts: eks
+# become: true
+  user: ec2-user
+
+  tasks:
+  - name: Deploy the pods on kubernetes
+    command: kubectl apply -f deployment.yml
