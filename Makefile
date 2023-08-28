@@ -40,7 +40,7 @@ ekss:
 
 gitpush:
 	git add .
-	git commit -m "Updated the background colour"
+	git commit -m "Updated the background colour to lightcoral"
 	git push origin master
 
 .PHONY: start-servers stop-servers tomcat jenkins dockers ansible ekss
