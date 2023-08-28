@@ -40,7 +40,7 @@ ekss:
 
 gitpush:
 	git add .
-	git commit -m "Added ansible files with deployment"
+	git commit -m "Updated the background colour"
 	git push origin master
 
 .PHONY: start-servers stop-servers tomcat jenkins dockers ansible ekss
