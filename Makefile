@@ -13,9 +13,14 @@ stop-servers:
 	aws ec2 stop-instances --instance-id i-0c0b62d1ce15c9c83
 
 tomcat:
-	ssh -i /Users/dhanushdinesh/Downloads/DevOpsProjectKey.pem ec2-user@52.90.68.67
+	ssh -i /Users/dhanushdinesh/Downloads/DevOpsProjectKey.pem ec2-user@52.91.208.94
 # start tomcat /opt/tomcat/bin/startup.sh
 # stop tomcat /opt/tomcat/bin/shutdown.sh
+
+ts:
+	aws ec2 start-instances --instance-id i-070cfa2385792f874
+te: 
+	aws ec2 stop-instances --instance-id i-070cfa2385792f874
 
 jenkins:
 	ssh -i /Users/dhanushdinesh/Downloads/DevOpsProjectKey.pem ec2-user@52.55.43.125
@@ -43,4 +48,4 @@ gitpush:
 	git commit -m "Updated the background colour to lightcoral"
 	git push origin master
 
-.PHONY: start-servers stop-servers tomcat jenkins dockers ansible ekss
+.PHONY: start-servers stop-servers tomcat jenkins dockers ansible ekss ts te
